@@ -1,0 +1,101 @@
+<div class = "row">
+    <div class = "col-md-5 col-md-offset-2">
+        <div class = "row">
+            <h4>Your Long URL is:</h4>
+            <a ng-href ="{{longUrl}}" target ="_blank">{{longUrl}}</a>
+        </div>
+        <div class = "row">
+            <h4>Your Short URL is:</h4>
+            <a ng-href ="{{shortUrl}}" target ="_blank">{{shortUrlToShow}}</a>
+        </div>
+    </div>
+
+    <div class = "col-md-3">
+        <div class = "panel panel-defalt">
+            <div class ="panel-heading">
+                Totoal Click
+            </div>
+            <div class = "panel-body">
+                {{totalClicks}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-md-6">
+            <div class = "panel panel-defalt">
+                <div class ="panel-heading">
+                    Referer
+                </div>
+                <div class = "panel-body">
+                    <canvas id="pie" class="chart chart-pie"
+                            chart-data="pieData" chart-labels="pieLabels" chart-options="charOptions">
+                    </canvas>
+                </div>
+            </div>
+    </div>
+    <div class = "col-md-6">
+        <div class = "panel panel-defalt">
+            <div class ="panel-heading">
+                Countries
+            </div>
+            <div class = "panel-body">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                        chart-data="doughnutData" chart-labels="doughnutLabels">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-md-8 col-md-offset-2">
+        <div class = "panel panel-defalt">
+            <div class ="panel-heading">
+                Clicks for the past:
+                <a href = "javascript:void(0);" ng-click = "getTime(hour)" ng-class ="{'text-muted':time == 'hour'}" >Hour</a>
+                <a href = "javascript:void(0);" ng-click = "getTime(day)"  ng-class ="{'text-muted':time == 'day'}">Day</a>
+                <a href = "javascript:void(0);" ng-click = "getTime(month)" ng-class ="{'text-muted':time == 'month'}">Month</a>
+            </div>
+            <div class = "panel-body">
+                <canvas id="line" class="chart chart-line" chart-data="lineData"
+                        chart-labels="lineLabels" >
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class = "row">
+    <div class = "col-md-6">
+        <div class = "panel panel-defalt">
+            <div class ="panel-heading">
+                Platform
+            </div>
+            <div class = "panel-body">
+                <canvas id="bar" class="chart chart-bar"
+                        chart-data="barData" chart-labels="barLabels" chart-options="charOptions">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class = "col-md-6">
+        <div class = "panel panel-defalt">
+            <div class ="panel-heading">
+                Browser
+            </div>
+            <div class = "panel-body">
+                <canvas id="base" class="chart chart-horizontal-bar"
+                        chart-data="baseData" chart-labels="baseLabels" chart-options="baseOptions" >
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

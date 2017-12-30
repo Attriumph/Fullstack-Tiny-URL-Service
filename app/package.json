@@ -1,0 +1,20 @@
+{
+  "name": "inspectionprofiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hlq",
+  "license": "ISC",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-useragent": "^1.0.8",
+    "geoip-lite": "^1.2.1",
+    "mongoose": "^4.13.7",
+    "redis": "^2.8.0"
+  }
+}
