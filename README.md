@@ -1,6 +1,6 @@
 # Fullstack-Tiny-URL-Service
 
-## 系统设计思路：SNAKE 原则 —— crack a design in 5 steps
+## (一)系统设计思路：SNAKE 原则 —— crack a design in 5 steps
 > 1.scenario： use case/interface
 >> shortURL insert（longURL）  
 longURL lookup（shortURL）重定向
