@@ -19,8 +19,11 @@ longURL lookup（shortURL）重定向
      都是输入
     
 > 3.Aplication: service/algorithm
+ 
  *初期思路：存---map（两张，shortToLong， LongToShort）
-如何生成shortURL呢？-----generateShortURL（）; 最简单---return map.size（），但是会原来越大,所以引入字母
+ 
+  如何生成shortURL呢？-----generateShortURL（）;
+  最简单---return map.size（），但是会原来越大,所以引入字母
                                                                                          
                                                                                  
 > 4.kilobit: data 基于前面可以考虑到多大的数据数量级
