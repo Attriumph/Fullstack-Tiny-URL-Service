@@ -31,6 +31,10 @@ longURL lookup（shortURL）重定向
 > 5.evolve：升级，修改
 
 how to support random? random(0,range)
+
 how to avoid conflicting? try again
+
 how to implement time-limited service? expire/state
+
 how to cache? pre-load :把硬盘的数据全部读入内存，提高速度 + replacement
+
