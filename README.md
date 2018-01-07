@@ -29,6 +29,7 @@ longURL lookup（shortURL）重定向
 > 4.kilobit: data 基于前面可以考虑到多大的数据数量级
 
 > 5.evolve：升级，修改
+
 how to support random? random(0,range)
 how to avoid conflicting? try again
 how to implement time-limited service? expire/state
