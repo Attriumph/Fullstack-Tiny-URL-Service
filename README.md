@@ -1,6 +1,6 @@
 # Fullstack-Tiny-URL-Service
 
-## (一)系统设计思路：SNAKE 原则 —— crack a design in 5 steps
+## (一)Design steps：SNAKE principle —— crack a design in 5 steps
 > 1.scenario： use case/interface
 >> shortURL insert（longURL）  
 longURL lookup（shortURL）重定向
@@ -26,15 +26,15 @@ longURL lookup（shortURL）重定向
   最简单---return map.size（），但是会原来越大,所以引入字母
                                                                                          
                                                                                  
-> 4.kilobit: data 基于前面可以考虑到多大的数据数量级
+> 4.kilobit: data 
 
 > 5.evolve：升级，修改
 
-how to support random? random(0,range)
+  how to support random? random(0,range)
 
-how to avoid conflicting? try again
+  how to avoid conflicting? try again
 
-how to implement time-limited service? expire/state
+  how to implement time-limited service? expire/state
 
-how to cache? pre-load :把硬盘的数据全部读入内存，提高速度 + replacement
+  how to cache? pre-load :把硬盘的数据全部读入内存，提高速度 + replacement
 
