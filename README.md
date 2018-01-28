@@ -10,14 +10,19 @@ longURL lookup（shortURL）re-direct
 (1)average estimate
    >> insert：
     per day： 1,000,000*1%（function usage）*10（fuction frequencey）= 100,000
-    RPS ： 100,000/86400 = 1.2
+   
+   RPS ： 100,000/86400 = 1.2
    >> Lookup：
      per day： 1,000,000*100%(function usage)*3(function frequency)= 3,000,000
-     per second: 3000000/86400=35  
+   
+   per second: 3000000/86400=35  
 (2) peek estimate:
+   
    Assume peak traffic = 5* Average daily traffic
-   insert peek : 1.2 *5 = 6
-   lookup peek： 35 *5 = 175
+   
+   insert peek : 1.2 *5 = 6
+  
+  lookup peek： 35 *5 = 175
  
  so， we can deal with it by a single machine
 > 3.Aplication: service/algorithm
