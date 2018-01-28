@@ -1,6 +1,6 @@
 # Fullstack-Tiny-URL-Service
 
-## (一)Design steps：SNAKE principle —— crack a design in 5 steps
+## Design steps：SNAKE principle —— crack a design in 5 steps
 ### 1.scenario： use case/interface
 
 >
@@ -33,9 +33,12 @@
 ### 4.kilobit: data 
 
 ### 5.evolve：update and modify
+how to support random? random(0,range)
+how to avoid conflicting? try again
+how to implement time-limited service? expire/state
+how to cache? pre-load  + replacement
+## Necessary Background
 
-  how to support random? random(0,range)
-  how to avoid conflicting? try again
-  how to implement time-limited service? expire/state
-  how to cache? pre-load  + replacement
-
+### 1.Distributed System
+CAP principle
+[Image from Internet](http://chuantu.biz/t6/216/1517119119x-1566688724.png)
