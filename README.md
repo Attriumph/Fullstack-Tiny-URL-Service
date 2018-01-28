@@ -29,9 +29,9 @@
     shortURL insert(longURL){
        if LongToShortMap not containsKey longURL:
            generate shortURL;
-           put<longURL, shortURL> into LongToShortMap;
+           put<longURL, shortURL> into LongToShortMap;
            put<shortURL, longURL> into ShortToLongMap;
-       return LongToShortMap(longURL);
+           return LongToShortMap(longURL);
            }
        
        longURL lookup(shortURL){
