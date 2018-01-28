@@ -3,8 +3,9 @@
 ### 1.scenario： use case/interface
 * shortURL insert（longURL）   
 * longURL lookup（shortURL）re-direct
+
 ### 2.Necessary: constraint /hypothesis 
-   
+
     We assume daily active user： 1,000,000
     (1)average estimate
     for Insert：
@@ -56,7 +57,7 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
 3. introduce a table to replace two maps                                                                                       
                                                                                  
 ### 4.Kilobit: data 
-    
+
     average size of long url = 100 byte
     average size of short url = 4 bytes(int)
     daily new URL = 104 * 100,000 = 104,000,000 byte = 104mb
