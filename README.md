@@ -73,5 +73,5 @@ how to cache? pre-load  + replacement
 ### 1.Distributed System
 CAP principle
 
-                       ![The illustration of CAP](http://chuantu.biz/t6/216/1517120514x-1376440240.png " ")
+![The illustration of CAP](http://chuantu.biz/t6/216/1517120514x-1376440240.png " ")
 
