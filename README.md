@@ -6,15 +6,15 @@
 longURL lookup（shortURL）re-direct
 
 > 2.Necessary: constraint /hypothesis 
->> daily active user： 1,000,000
->>> average estimate
->>>> insert：
+    daily active user： 1,000,000
+(1)average estimate
+   >> insert：
     per day： 1,000,000*1%（function usage）*10（fuction frequencey）= 100,000
     RPS ： 100,000/86400 = 1.2
->>>> Lookup：
+   >> Lookup：
      per day： 1,000,000*100%(function usage)*3(function frequency)= 3,000,000
      per second: 3000000/86400=35  
->>> peek estimate:
+(2) peek estimate:
    Assume peak traffic = 5* Average daily traffic
    insert peek : 1.2 *5 = 6
    lookup peek： 35 *5 = 175
