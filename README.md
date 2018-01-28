@@ -6,18 +6,20 @@
 longURL lookup（shortURL）re-direct
 
 > 2.Necessary: constraint /hypothesis 
->> daily active user： 1000000
->>> insert：
-    
-    per day： 10000*1%（function usage）*10（fuction frequencey）= 100000
-    per day：10000*365 =
-    per second ： 100000/86400=1.2
->>> Lookup：
-     
-     per day： 1000000*100%(function usage)*3(function frequency)= 3000000
+>> daily active user： 1,000,000
+>>> average estimate
+>>>> insert：
+    per day： 1,000,000*1%（function usage）*10（fuction frequencey）= 100,000
+    RPS ： 100,000/86400 = 1.2
+>>>> Lookup：
+     per day： 1,000,000*100%(function usage)*3(function frequency)= 3,000,000
      per second: 3000000/86400=35  
-     
-    
+>>> peek estimate:
+   Assume peak traffic = 5* Average daily traffic
+   insert peek : 1.2 *5 = 6
+   lookup peek： 35 *5 = 175
+ 
+ so， we can deal with it by a single machine
 > 3.Aplication: service/algorithm
  
  *in oder to design efficiently, we use map at the begin（shortToLong， LongToShort）
