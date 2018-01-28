@@ -23,14 +23,45 @@
      Therefore, we can deal with it by a single machine
 
 ### 3.Aplication: service/algorithm
- 
- *in oder to design efficiently, we use map at the begin（shortToLong， LongToShort）
- 
-  how to generate shortURL？-----generateShortURL();
-  the simplest way---return map.size()，but the size will to big, so we need add letters
-                                                                                         
+1.In oder to design efficiently, we use map at the begin(ShortToLongMap， LongToShortMap)
+    map<longURL, shortURL> LongToShortMap;
+    map<shortURL, longURL> ShortToLongMap;
+    shortURL insert(longURL){
+       if LongToShortMap not containsKey longURL:
+           generate shortURL；
+           put<longURL, shortURL> into LongToShortMap;
+           put<shortURL, longURL> into ShortToLongMap;
+       return LongToShortMap(longURL);
+           }
+       
+       longURL lookup(shortURL){
+       return ShortToLongMap.get(shortURL);
+       }
+    
+2.how to generate shortURL？
+The simplest way: return map.size()，but the size will increase too big, so we need add letters.
+Therefore, we need to convert decimal into 62 hex. Here is the code:
+    shortURL generateShortURL(){
+           return convertTo62(ShortToLong.size());
+    }
+    
+    shortURL convertTo62(mapSize){
+        char encode[62] = {'a',...'z','A',...'Z','0',...'9'};
+        shortURL = "";
+        while(mapSize != 0){
+            shortURL = encode[mapSize % 62] + shortURL;
+            mapSize /= 62;
+        }
+      return shortURL;
+    }
+ 3. introduce a table to replace two maps                                                                                       
                                                                                  
 ### 4.kilobit: data 
+    average size of long url = 100 byte
+    average size of short url = 4 bytes(int)
+    daily new URL = 104 * 100,000 = 104,000,000 byte = 104mb
+    year new URL = 104mb * 365 = 37960mb < 40GB
+    Therefore, singe Machine can handle!
 
 ### 5.evolve：update and modify
 how to support random? random(0,range)
@@ -41,5 +72,6 @@ how to cache? pre-load  + replacement
 
 ### 1.Distributed System
 CAP principle
-![The illustration of CAP](http://chuantu.biz/t6/216/1517120514x-1376440240.png " ")
+
+                       ![The illustration of CAP](http://chuantu.biz/t6/216/1517120514x-1376440240.png " ")
 
