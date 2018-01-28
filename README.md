@@ -2,7 +2,9 @@
 
 ## (一)Design steps：SNAKE principle —— crack a design in 5 steps
 ### 1.scenario： use case/interface
+
 · shortURL insert（longURL）  
+
 · longURL lookup（shortURL）re-direct
 
 ### 2.Necessary: constraint /hypothesis 
