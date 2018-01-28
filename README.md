@@ -4,7 +4,8 @@
 * shortURL insert（longURL）   
 * longURL lookup（shortURL）re-direct
 ### 2.Necessary: constraint /hypothesis 
-    We assume daily active user： 1,000,000
+   
+    We assume daily active user： 1,000,000
     (1)average estimate
     for Insert：
       per day： 1,000,000*1%（function usage）*10（fuction frequencey）= 100,000
@@ -54,7 +55,7 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
     }
 3. introduce a table to replace two maps                                                                                       
                                                                                  
-### 4.kilobit: data 
+### 4.Kilobit: data 
     average size of long url = 100 byte
     average size of short url = 4 bytes(int)
     daily new URL = 104 * 100,000 = 104,000,000 byte = 104mb
@@ -66,10 +67,5 @@ how to support random? random(0,range)
 how to avoid conflicting? try again
 how to implement time-limited service? expire/state
 how to cache? pre-load  + replacement
-## Necessary Background
 
-### 1.Distributed System
-CAP principle
-
-![The illustration of CAP](http://chuantu.biz/t6/216/1517120514x-1376440240.png " ")
 
