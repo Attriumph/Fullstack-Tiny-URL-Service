@@ -1,14 +1,11 @@
 # Fullstack-Tiny-URL-Service
-
 ## Design steps：SNAKE principle —— crack a design in 5 steps
 ### 1.scenario： use case/interface
-
->
-· shortURL insert（longURL）  
-· longURL lookup（shortURL）re-direct
+* shortURL insert（longURL）   
+* longURL lookup（shortURL）re-direct
 
 ### 2.Necessary: constraint /hypothesis 
-    daily active user： 1,000,000
+    We assume daily active user： 1,000,000
     (1)average estimate
     for Insert：
       per day： 1,000,000*1%（function usage）*10（fuction frequencey）= 100,000
@@ -24,6 +21,7 @@
 
 ### 3.Aplication: service/algorithm
 1.In oder to design efficiently, we use map at the begin(ShortToLongMap， LongToShortMap)
+    
     map<longURL, shortURL> LongToShortMap;
     map<shortURL, longURL> ShortToLongMap;
     shortURL insert(longURL){
@@ -54,7 +52,7 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
         }
       return shortURL;
     }
- 3. introduce a table to replace two maps                                                                                       
+3. introduce a table to replace two maps                                                                                       
                                                                                  
 ### 4.kilobit: data 
     average size of long url = 100 byte
