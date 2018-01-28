@@ -71,3 +71,6 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
 * how to implement time-limited service? expire/state
 * how to cache? pre-load  + replacement
 
+## Summary：
+
+![Bittiger](http://chuantu.biz/t6/216/1517124000x-1566688724.png " ")
