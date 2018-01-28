@@ -1,6 +1,6 @@
 # Fullstack-Tiny-URL-Service
 ## Design steps：SNAKE principle —— crack a design in 5 steps
-### 1.scenario： use case/interface
+### 1.Scenario： use case/interface
 * shortURL insert（longURL）   
 * longURL lookup（shortURL）re-direct
 
@@ -38,6 +38,7 @@
        }
     
 2.how to generate shortURL？
+
 The simplest way: return map.size()，but the size will increase too big, so we need add letters.
 Therefore, we need to convert decimal into 62 hex. Here is the code:
     
