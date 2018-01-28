@@ -3,7 +3,6 @@
 ### 1.scenario： use case/interface
 * shortURL insert（longURL）   
 * longURL lookup（shortURL）re-direct
-
 ### 2.Necessary: constraint /hypothesis 
     We assume daily active user： 1,000,000
     (1)average estimate
@@ -39,6 +38,7 @@
 2.how to generate shortURL？
 The simplest way: return map.size()，but the size will increase too big, so we need add letters.
 Therefore, we need to convert decimal into 62 hex. Here is the code:
+    
     shortURL generateShortURL(){
            return convertTo62(ShortToLong.size());
     }
