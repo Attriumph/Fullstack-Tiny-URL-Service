@@ -25,6 +25,7 @@
     
     map<longURL, shortURL> LongToShortMap;
     map<shortURL, longURL> ShortToLongMap;
+    
     shortURL insert(longURL){
        if LongToShortMap not containsKey longURL:
            generate shortURL；
