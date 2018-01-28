@@ -2,8 +2,8 @@
 
 ## (一)Design steps：SNAKE principle —— crack a design in 5 steps
 ### 1.scenario： use case/interface
-·shortURL insert（longURL）  
-·longURL lookup（shortURL）re-direct
+· shortURL insert（longURL）  
+· longURL lookup（shortURL）re-direct
 
 ### 2.Necessary: constraint /hypothesis 
     daily active user： 1,000,000
@@ -19,6 +19,7 @@
      insert peek : 1.2 *5 = 6
      lookup peek： 35 *5 = 175
      Therefore, we can deal with it by a single machine
+
 ### 3.Aplication: service/algorithm
  
  *in oder to design efficiently, we use map at the begin（shortToLong， LongToShort）
@@ -27,9 +28,9 @@
   the simplest way---return map.size()，but the size will to big, so we need add letters
                                                                                          
                                                                                  
-> 4.kilobit: data 
+### 4.kilobit: data 
 
-> 5.evolve：update and modify
+### 5.evolve：update and modify
 
   how to support random? random(0,range)
   how to avoid conflicting? try again
