@@ -75,4 +75,5 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
 
 ## Summary：
 
-![Illustration](http://chuantu.biz/t6/216/1517124000x-1566688724.png "alt ")
+  <img src="https://github.com/Attriumph/Fullstack-Tiny-URL-Service/blob/master/images/summary.png" alt="summary" width="800" style="display:inline" />
+
