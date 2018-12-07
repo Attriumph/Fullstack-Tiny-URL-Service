@@ -23,7 +23,7 @@
 
 ### 3.Aplication: service/algorithm
 1.In oder to design efficiently, we use map at the begin(ShortToLongMap， LongToShortMap)
-    
+```javascript
     map<longURL, shortURL> LongToShortMap;
     map<shortURL, longURL> ShortToLongMap;
     
@@ -38,12 +38,12 @@
        longURL lookup(shortURL){
        return ShortToLongMap.get(shortURL);
        }
-    
+ ```   
 2.how to generate shortURL？
 
 The simplest way: return map.size()，but the size will increase too big, so we need add letters.
 Therefore, we need to convert decimal into 62 hex. Here is the code:
-    
+ ```javascript   
     shortURL generateShortURL(){
            return convertTo62(ShortToLong.size());
     }
@@ -57,6 +57,7 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
         }
       return shortURL;
     }
+ ```   
 3. introduce a table to replace two maps                                                                                       
                                                                                  
 ### 4.Kilobit: data 
