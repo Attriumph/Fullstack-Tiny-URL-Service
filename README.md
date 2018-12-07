@@ -1,10 +1,10 @@
 # Fullstack-Tiny-URL-Service
 ## Design steps：SNAKE principle —— crack a design in 5 steps
-### 1.Scenario： use case/interface
+### 1. Scenario： use case/interface
 * shortURL insert（longURL）   
 * longURL lookup（shortURL）re-direct
 
-### 2.Necessary: constraint /hypothesis 
+### 2. Necessary: constraint /hypothesis 
 
  We assume daily active user： 1,000,000
   - (1)average estimate
@@ -18,14 +18,15 @@
 
   - (2)peek estimate:
 
-     Assume peak traffic = 5* Average daily traffic
-     insert peek : 1.2 *5 = 6
-     lookup peek： 35 *5 = 175
+     - Assume peak traffic = 5* Average daily traffic
+     - insert peek : 1.2 *5 = 6
+     - lookup peek： 35 *5 = 175
 
      Therefore, we can deal with it by a single machine
 
-### 3.Aplication: service/algorithm
-1.In oder to design efficiently, we use map at the begin(ShortToLongMap， LongToShortMap)
+### 3. Aplication: service/algorithm
+1. In oder to design efficiently, we use map at the begin(ShortToLongMap， LongToShortMap)
+
 ```javascript
     map<longURL, shortURL> LongToShortMap;
     map<shortURL, longURL> ShortToLongMap;
@@ -42,7 +43,7 @@
        return ShortToLongMap.get(shortURL);
        }
 ```
-2.how to generate shortURL？
+2. how to generate shortURL？
 
 The simplest way: return map.size()，but the size will increase too big, so we need add letters.
 Therefore, we need to convert decimal into 62 hex. Here is the code:
@@ -63,7 +64,7 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
  ```
 3. introduce a table to replace two maps                                                                                       
 
-### 4.Kilobit: data 
+### 4. Kilobit: data 
 
     average size of long url = 100 byte
     average size of short url = 4 bytes(int)
@@ -71,11 +72,15 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
     year new URL = 104mb * 365 = 37960mb < 40GB
     Therefore, singe Machine can handle!
 
-### 5.evolve：update and modify
-* how to support random? random(0,range)
-* how to avoid conflicting? try again
-* how to implement time-limited service? expire/state
-* how to cache? pre-load  + replacement
+### 5. Evolve：update and modify
+* how to support random? 
+  - random(0,range)
+* how to avoid conflicting?
+  - try again
+* how to implement time-limited service?
+  - expire/state
+* how to cache? 
+  - pre-load  + replacement
 
 ## Summary：
 
