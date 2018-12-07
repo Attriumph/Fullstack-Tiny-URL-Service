@@ -66,20 +66,27 @@ Therefore, we need to convert decimal into 62 hex. Here is the code:
 
 ### 4. Kilobit: data 
 
-    average size of long url = 100 byte
-    average size of short url = 4 bytes(int)
-    daily new URL = 104 * 100,000 = 104,000,000 byte = 104mb
-    year new URL = 104mb * 365 = 37960mb < 40GB
-    Therefore, singe Machine can handle!
+According to experience, we can assume:
+
+* Average size of long url = 100 byte
+
+* Average size of short url = 4 bytes(int)
+
+* Daily new URL = 104 * 100,000 = 104,000,000 byte = 104mb
+
+* Year new URL = 104mb * 365 = 37960mb < 40GB
+
+  Therefore, singe Machine can handle!
 
 ### 5. Evolve：update and modify
-* how to support random? 
+
+* How to support random? 
   - random(0,range)
-* how to avoid conflicting?
+* How to avoid conflicting?
   - try again
-* how to implement time-limited service?
+* How to implement time-limited service?
   - expire/state
-* how to cache? 
+* How to cache? 
   - pre-load  + replacement
 
 ## Summary：
