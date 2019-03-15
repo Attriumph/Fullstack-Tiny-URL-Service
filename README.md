@@ -7,7 +7,7 @@
 ### 2. Necessary: constraint /hypothesis 
 
  We assume daily active user： 1,000,000
-  - (1)average estimate
+  - (1) average estimate
     - for Insert： 
       - per day: 1,000,000*1%（function usage）*10(function frequencey) = 100,000 
       - RPS : 100,000/86400 = 1.2
@@ -16,7 +16,7 @@
       - per day： 1,000,000*100%(function usage)*3(function frequency)= 3,000,000
       - RPS : 3000000/86400=35  
 
-  - (2)peek estimate:
+  - (2) peek estimate:
 
      - Assume peak traffic = 5* Average daily traffic
      - insert peek : 1.2 *5 = 6
